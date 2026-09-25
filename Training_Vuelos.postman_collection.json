@@ -1,0 +1,220 @@
+{
+  "info": {
+    "_postman_id": "cb6e0a6e-d8ba-46ad-b213-0f8c27a2b432",
+    "name": "Training_Vuelos",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_exporter_id": "24110640"
+  },
+  "item": [
+    {
+      "name": "Welcome",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:3000",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "3000"
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "saveVuelo",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n    \"codigo_vuelo\": \"TAE-002\",\r\n    \"codigo_aerolinea\": \"TM\",\r\n    \"aeropuerto_origen\": \"GYE\",\r\n    \"aeropuerto_destino\": \"UIO\",\r\n    \"fecha_hora_salida\": \"29/08/2026 21:30:300\",\r\n    \"fecha_hora_llegada\": \"29/08/2026 23:00:500\",\r\n    \"asientos_disponibles\": 24,\r\n    \"estado\": \"Disponible\"\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:3000/api/v1/vuelos",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "3000",
+          "path": [
+            "api",
+            "v1",
+            "vuelos"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "getVuelosAll",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:3000/api/v1/vuelos",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "3000",
+          "path": [
+            "api",
+            "v1",
+            "vuelos"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "getVueloforId",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:3000/api/v1/vuelos/2",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "3000",
+          "path": [
+            "api",
+            "v1",
+            "vuelos",
+            "2"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "getVuelosHoy",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:3000/api/v1/vuelos/hoy",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "3000",
+          "path": [
+            "api",
+            "v1",
+            "vuelos",
+            "hoy"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "getVuelosPorDestino",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:3000/api/v1/vuelos/destino/UIO",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "3000",
+          "path": [
+            "api",
+            "v1",
+            "vuelos",
+            "destino",
+            "UIO"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "getVueloPorCodigo",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:3000/api/v1/vuelos/codigo/TM101",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "3000",
+          "path": [
+            "api",
+            "v1",
+            "vuelos",
+            "codigo",
+            "TM101"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "putVuelo",
+      "request": {
+        "method": "PUT",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n    \"codigo_vuelo\": \"TAE-002\",\r\n    \"codigo_aerolinea\": \"TAME\",\r\n    \"aeropuerto_origen\": \"GYE\",\r\n    \"aeropuerto_destino\": \"UIO\",\r\n    \"fecha_hora_salida\": \"29/08/2026 21:30:300\",\r\n    \"fecha_hora_llegada\": \"29/08/2026 23:00:500\",\r\n    \"asientos_disponibles\": 24,\r\n    \"estado\": \"Disponible\"\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:3000/api/v1/vuelos/2",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "3000",
+          "path": [
+            "api",
+            "v1",
+            "vuelos",
+            "2"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "deletevuelo",
+      "request": {
+        "method": "DELETE",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:3000/api/v1/vuelos/3",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "3000",
+          "path": [
+            "api",
+            "v1",
+            "vuelos",
+            "3"
+          ]
+        }
+      },
+      "response": []
+    }
+  ]
+}
